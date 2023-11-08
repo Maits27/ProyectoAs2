@@ -1,0 +1,102 @@
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: darken(#EFEFEF, 25%);
+background-image: radial-gradient(circle farthest-side at 50% 100%, #EFEFEF 0%, darken(#EFEFEF, 25%));
+  background-size: contain;
+}
+
+
+.stage {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  padding: 32px;
+  min-height: calc(100vh - 80px);
+  &:hover > .tile {
+    opacity: 0.5;
+  }
+  
+  .tile {
+    position: relative;
+    flex: 1 1 calc(33.333% - 96px);
+    padding: (32px * 2) 32px;
+    margin: 32px / 2;
+    background: darken(#EFEFEF, 75%);
+    cursor: pointer;
+    box-shadow: 5px 5px 0 0 transparentize(darken(#EFEFEF, 75%), 0.75);
+    transform-origin: 50% 100% 0;
+    transition-property: transform box-shadow;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(.76,-0.35,.21,1.45);
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+      box-shadow: none;
+    }
+    > h1 {
+      font-weight: 700;
+      color: #EFEFEF;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.tile {
+  &:after,
+  &::after {
+    content: '';
+    position: absolute;
+    top: .5em;
+    left: .5em;
+    height: calc(100% - .5em);
+    width: calc(100% - .5em);
+    pointer-events: none;
+    opacity: 0.15;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  &.profiles {
+    background-color: darken(#007F9A, 12.5%);
+    background-image: radial-gradient(circle farthest-corner at 100% 0, #007F9A, transparent);
+    &:after,
+    &::after {
+      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/911489/svg_rocket.svg);
+      background-position: 50% 70%;
+      background-size: 230px;
+    }
+  }
+  &.teams {
+    background-color: darken(darken(#0fd985, 5%), 15%);
+    background-image: radial-gradient(circle farthest-corner at 100% 0, darken(#0fd985, 5%), transparent);
+    &:after,
+    &::after {
+      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/911489/svg_group.svg);
+    }
+  }
+  &.business {
+    background-color: darken(#604671, 15%);
+    background-image: radial-gradient(circle farthest-corner at 100% 0, #604671, transparent);
+        &:after,
+    &::after {
+      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/911489/svg_trend.svg);
+      background-size: 180px;
+    }
+  }
+  &.accreditation {
+    background-color: darken(#F0991F, 15%);
+    background-image: radial-gradient(circle farthest-corner at 100% 0, lighten(#F0991F, 15%), transparent);
+    &:after,
+    &::after {
+    }
+  }
+}

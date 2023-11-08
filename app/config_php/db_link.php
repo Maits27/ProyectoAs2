@@ -34,8 +34,8 @@
     // Cerrar la conexión cuando hayas terminado
     $conn = null;*/
     //DB-arekin konexioa:
-    $hostname = "db";
-    $username = "admin";
+    $hostname = "mysql";
+    $username = "root";
     $password = "test";
     $db = "database";
 

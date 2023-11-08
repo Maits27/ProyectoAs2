@@ -11,27 +11,27 @@
 
 ?>
 
+
 <!DOCTYPE html>
-<html>
+<html lang="en" >
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Enlace al CSS de Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <title>Menu</title>
-        <link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
-        <link rel="stylesheet" type="text/css" href="../../estiloak/user_menu/user_menu.css">
-        <link rel="shortcut icon" href="../../irudiak/book.png" />
     </head>
     <body>
-        <?php include '../../templates/header.php'; ?>
-        <div class="menua">
-            <div class="botoi_panel">
-                <button><a href="./datuen_aldaketa.php">Nire datuak aldatu</a></button>
-                <button><a href="./liburu_zerrenda.php">Liburuen zerrenda ikusi</a></button>
-                <button><a href="./liburu_gehitu.php">Liburua gehitu</a></button>
-                <button><a href="../../config_php/logout.php">Saioa itxi</a></button>
-            </div>
-        </div>
-        <!-- <a href="datuen_aldaketa.html">Nire datuak aldatu</a> -->
-        <!-- <a href="liburu_zerrenda.html">Liburuen zerrenda ikusi</a>
-        <a href="liburu_gehitu.html">Liburua gehitu</a>
-        <a href="../index.html"></a> -->
+        <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+        </button>
+        <ul class="dropdown-menu">
+            <li><button class="dropdown-item" type="button">Gráficas</button></li>
+            <li><button class="dropdown-item" type="button">Añadir transacción</button></li>
+            <li><button class="dropdown-item" type="button">Chat</button></li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
     </body>
 </html>
